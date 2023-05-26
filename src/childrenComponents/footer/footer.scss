@@ -1,0 +1,103 @@
+@import '../../variables';
+@mixin outside{
+    position: relative;
+    z-index: 1;
+}
+
+footer
+{
+    .outside
+    {
+        @include outside();
+    }
+    position: relative;
+    background: linear-gradient(to bottom, $main-color, white, $main-color);
+    a
+    {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: $normal-font-size;
+        font-family: $normal-font-family;
+        padding: 0.5rem;
+    }
+    .contactLink
+    {
+        display:flex;
+        flex-direction: column;
+        align-content: flex-start;
+        div.links
+        {
+            display: flex;
+            flex-direction: row;
+            li
+            {
+                padding: 1rem;
+            }
+        }
+    }
+    .firstFooter
+    {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: {
+            left:1rem;
+            right:1rem;
+            top:1rem;
+        }
+        // margin:1rem;
+    }
+    .secondFooter
+    {
+        display :flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: {
+            left:1rem;
+            right:1rem;
+            bottom:1rem;
+            top:1rem;
+        }
+    }
+    .services
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .serviceDays
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    h3,span
+    {
+        font-size: $footer-font-size;
+        font-family: $header-font-family;
+        color: $secondary-color;
+    }
+    p{
+        color: $secondary-color;
+        font-family: $normal-font-family;
+        font-size: $footer-font-size;
+    }
+}
+.cover
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $cover-div-color;
+    z-index: 0;
+}

@@ -1,0 +1,179 @@
+@import '../../_variables.scss';
+
+@mixin bg-filter{
+    background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+}
+
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color:$font-color;
+    box-shadow: inset 0 0 1rem 1rem $secondary-color;
+    
+    &#welcomeView
+    {
+        background-image: url('../../assets/landscape/pic1.jpeg');
+        @include bg-filter();
+        width: 100%;
+        height: 85vh;
+    }
+    &#welcomeView2
+    {
+       background: url('../../assets/landscape/pic3\ \(2\).jpg');
+       @include bg-filter();
+        width: 100%;
+        height: 100vh;
+    }
+    &#welcomeView3
+    {
+        background: url('../../assets/landscape/pic4.jpg');
+        @include bg-filter();
+        width: 100%;
+        height: 100vh;
+    }
+    &#welcomeView4
+    {
+        background: url('../../assets/landscape/pic5.jpg');
+                @include bg-filter();
+        width: 100%;
+        height: 100vh;
+    }
+    &#welcomeView5
+    {
+        background: url('../../assets/landscape/pic6.JPG');
+                @include bg-filter();
+        width: 100%;
+        height: 100vh;
+        .prayerNotice{
+            max-width: 40vw;
+            padding-bottom: 0.5rem;
+        }
+    }
+
+
+    .cover
+    {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $cover-div-color;
+        z-index: 0;
+    }
+    .textbody
+    {
+        position: relative;
+        z-index: 2;
+        width: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        align-items: center;
+        &.next{
+            width:85%;
+        }
+        .devotional{
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-gap: 2rem 3rem;
+        }
+    }
+    h1
+    {
+        font-size: $header-font-size;
+        font-family: $header-font-family;
+    }
+
+    h2
+    {
+        font-size: $sub-header-size;
+        font-family: $header-font-family;
+        color: $secondary-color;
+        text-align: center;
+    }
+    h3
+    {
+        font-family: $normal-font-family;
+        font-size: $sub-header-size;
+        font-weight: bold;
+        color: $secondary-color;
+    }
+    p
+    {
+        font-family: $normal-font-family;
+        font-size: $normal-font-size;
+        font-weight: bold;
+        color: $p-font-color;
+    }
+    i
+    {
+        color: $secondary-color;
+        font-size: $normal-font-size;
+    }
+
+
+    button{
+        font-size: $normal-font-size;
+        font-family: $normal-font-family;
+        font-weight: bold;
+        border-radius: 1rem;
+        width: 15rem;
+        height: 5rem;
+        background: linear-gradient(to bottom, $main-color, white, $main-color);
+        border: none;
+        animation: btn-move 1s linear 1s infinite;
+        transition-duration: 0.5s;
+        &:hover{
+            scale: 1.1;
+            cursor: pointer;
+        }
+    }
+    .pseudoImage
+    {
+        background-color: black;
+        border-radius: 2rem;
+        width: 15rem;
+        height: 10rem;
+        color: $secondary-color;
+        text-align: center;
+        font-size: $normal-font-size;
+    }
+    .devotionalM
+    {
+        overflow: hidden;
+        width: 30vw;
+        height: 25vh;
+        background-color: rgb(177, 172, 172);
+        padding: {
+            left:1rem;
+            right: 1rem;
+        }
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            font-size: 1rem;
+            color: rgb(0, 0, 0);
+            text-align: start;
+        }
+    }
+}
+
+
+@keyframes btn-move{
+    0%{
+        background: linear-gradient(to bottom, $main-color, white, $main-color);
+    }
+    50%{
+        background: linear-gradient(to bottom, white, $main-color, white);
+    }
+}
