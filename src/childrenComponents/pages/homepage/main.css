@@ -1,3 +1,27 @@
+main {
+  position: relative;
+}
+main .toTopBtn {
+  position: fixed;
+  top: 90vh;
+  right: 0;
+  z-index: 100;
+  background: rgb(184, 37, 37);
+  height: auto;
+  border-radius: 2rem;
+  border: 1px solid black;
+  overflow: hidden;
+}
+main .toTopBtn a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+main .toTopBtn:hover {
+  animation: btn-move 1s ease-in infinite;
+}
+
 section {
   display: flex;
   justify-content: center;
@@ -7,7 +31,6 @@ section {
   box-shadow: inset 0 0 1rem 1rem rgb(255, 255, 255);
 }
 section#welcomeView {
-  background-image: url("../../assets/landscape/pic1.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -15,7 +38,6 @@ section#welcomeView {
   height: 85vh;
 }
 section#welcomeView2 {
-  background: url("../../assets/landscape/pic3 (2).jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23,15 +45,32 @@ section#welcomeView2 {
   height: 100vh;
 }
 section#welcomeView3 {
-  background: url("../../assets/landscape/pic4.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 100vh;
 }
+section#welcomeView3 .textbody .imageContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, auto));
+  grid-gap: 15px;
+  height: auto;
+}
+.pseudoImage {
+  background-color: black;
+  border-radius: 2rem;
+  width: 15rem;
+  height: 13rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 section#welcomeView4 {
-  background: url("../../assets/landscape/pic5.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -39,7 +78,6 @@ section#welcomeView4 {
   height: 100vh;
 }
 section#welcomeView5 {
-  background: url("../../assets/landscape/pic6.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -96,16 +134,16 @@ section h3 {
 }
 section p {
   font-family: Garamond;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: rgb(184, 181, 181);
+  color: rgb(231, 231, 231);
 }
 section i {
   color: rgb(255, 255, 255);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 section button {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: Garamond;
   font-weight: bold;
   border-radius: 1rem;
@@ -113,21 +151,12 @@ section button {
   height: 5rem;
   background: linear-gradient(to bottom, rgb(184, 37, 37), white, rgb(184, 37, 37));
   border: none;
-  animation: btn-move 1s linear 1s infinite;
+  animation: btn-move 2s linear infinite;
   transition-duration: 0.5s;
 }
 section button:hover {
   scale: 1.1;
   cursor: pointer;
-}
-section .pseudoImage {
-  background-color: black;
-  border-radius: 2rem;
-  width: 15rem;
-  height: 10rem;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  font-size: 2rem;
 }
 section .devotionalM {
   overflow: hidden;
@@ -145,13 +174,20 @@ section .devotionalM p {
   font-size: 1rem;
   color: rgb(0, 0, 0);
   text-align: start;
+  overflow: hidden;
 }
 
 @keyframes btn-move {
-  0% {
-    background: linear-gradient(to bottom, rgb(184, 37, 37), white, rgb(184, 37, 37));
+  25% {
+    background: linear-gradient(to bottom, white, rgb(184, 37, 37), rgb(184, 37, 37), rgb(184, 37, 37));
   }
   50% {
-    background: linear-gradient(to bottom, white, rgb(184, 37, 37), white);
+    background: linear-gradient(to bottom, rgb(184, 37, 37), white, rgb(184, 37, 37), rgb(184, 37, 37));
+  }
+  75% {
+    background: linear-gradient(to bottom, rgb(184, 37, 37), rgb(184, 37, 37), white, rgb(184, 37, 37));
+  }
+  100% {
+    background: linear-gradient(to bottom, rgb(184, 37, 37), rgb(184, 37, 37), rgb(184, 37, 37), white);
   }
 }/*# sourceMappingURL=main.css.map */

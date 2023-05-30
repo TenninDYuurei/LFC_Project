@@ -1,4 +1,4 @@
-@import '../../_variables.scss';
+@import '../../../variables';
 
 @mixin bg-filter{
     background-repeat: no-repeat;
@@ -6,6 +6,33 @@
         background-size: cover;
 }
 
+main
+{
+    position: relative;
+    .toTopBtn
+    {
+    position:fixed;
+    top: 90vh;
+    right: 0;
+    z-index: 100;
+    background: $main-color;
+    height: $back-to-top-btn-height;
+    border-radius: 2rem;
+    border: 1px solid black;
+    overflow: hidden;
+    a
+    {
+        color: $secondary-color;
+        text-decoration: none;
+        padding: $back-to-top-btn-padding;
+        font-size: $normal-font-size;
+    }
+    &:hover
+    {
+        animation: btn-move 1s ease-in infinite;
+    }
+    }
+}
 section
 {
     display: flex;
@@ -17,35 +44,55 @@ section
     
     &#welcomeView
     {
-        background-image: url('../../assets/landscape/pic1.jpeg');
+        // background-image: url('../../assets/landscape/pic1.jpeg');
         @include bg-filter();
         width: 100%;
         height: 85vh;
     }
     &#welcomeView2
     {
-       background: url('../../assets/landscape/pic3\ \(2\).jpg');
+    //    background: url('../../assets/landscape/pic3\ \(2\).jpg');
        @include bg-filter();
         width: 100%;
         height: 100vh;
     }
     &#welcomeView3
     {
-        background: url('../../assets/landscape/pic4.jpg');
+        // background: url('../../assets/landscape/pic4.jpg');
         @include bg-filter();
         width: 100%;
         height: 100vh;
+        .textbody .imageContainer{
+                display: grid;
+                // grid-template-rows:150px;
+                grid-template-columns: repeat(3, minmax(auto,auto));
+                grid-gap: 15px;
+                height: auto
+        }
+    }
+    @at-root .pseudoImage
+    {
+        background-color: black;
+        border-radius: 2rem;
+        width: 15rem;
+        height: 13rem;
+        color: $secondary-color;
+        text-align: center;
+        font-size: $normal-font-size;
+        display: flex;
+        align-items: center;
+        justify-content: center
     }
     &#welcomeView4
     {
-        background: url('../../assets/landscape/pic5.jpg');
+        // background: url('../../assets/landscape/pic5.jpg');
                 @include bg-filter();
         width: 100%;
         height: 100vh;
     }
     &#welcomeView5
     {
-        background: url('../../assets/landscape/pic6.JPG');
+        // background: url('../../assets/landscape/pic6.JPG');
                 @include bg-filter();
         width: 100%;
         height: 100vh;
@@ -129,23 +176,14 @@ section
         height: 5rem;
         background: linear-gradient(to bottom, $main-color, white, $main-color);
         border: none;
-        animation: btn-move 1s linear 1s infinite;
+        animation: btn-move 2s linear infinite;
         transition-duration: 0.5s;
         &:hover{
             scale: 1.1;
             cursor: pointer;
         }
     }
-    .pseudoImage
-    {
-        background-color: black;
-        border-radius: 2rem;
-        width: 15rem;
-        height: 10rem;
-        color: $secondary-color;
-        text-align: center;
-        font-size: $normal-font-size;
-    }
+  
     .devotionalM
     {
         overflow: hidden;
@@ -164,16 +202,24 @@ section
             font-size: 1rem;
             color: rgb(0, 0, 0);
             text-align: start;
+            overflow: hidden;
         }
     }
 }
 
 
+
 @keyframes btn-move{
-    0%{
-        background: linear-gradient(to bottom, $main-color, white, $main-color);
+    25%{
+        background: linear-gradient(to bottom,  white, $main-color, $main-color,$main-color);
     }
     50%{
-        background: linear-gradient(to bottom, white, $main-color, white);
+        background: linear-gradient(to bottom, $main-color, white, $main-color,$main-color);
+    }
+    75%{
+        background: linear-gradient(to bottom, $main-color, $main-color,white, $main-color);
+    }
+    100%{
+        background: linear-gradient(to bottom, $main-color, $main-color, $main-color, white);
     }
 }

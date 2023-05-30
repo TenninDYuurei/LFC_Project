@@ -8,18 +8,20 @@
     color:black;
     box-sizing: border-box;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 
 body
 {
     background-color: $main-color;
 }
-
-
 .whiteBg
+
 {
     background-color: $secondary-color;
 }
+
+// HEADER SECTION
 
 header
 {
@@ -29,20 +31,22 @@ header
     padding-right: 1rem;
     background: linear-gradient(to bottom, $main-color, white, $main-color);
 
-     &.header{
+     &.header
+     {
         display: flex;
         justify-content: space-between;
         color:black;
         align-items: center;
     
-        .headerLink{
+        .headerLink
+        {
             font-size: $headerLink-font-size;
             color: $font-color;
             text-decoration:none;
             padding-left:0.5rem;
             padding-right:0.5rem;
-            font-weight:bold;
-            &.active{
+            &.active
+            {
                 color: $main-color;
             }
         }
@@ -54,3 +58,4 @@ header
         justify-content: space-between;
     }
 }
+

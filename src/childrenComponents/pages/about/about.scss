@@ -1,0 +1,81 @@
+@import '../../../variables';
+@import '../../pages/homepage/main.scss';
+
+//    ABOUT COMPONENT STYLING SECTION
+
+.aboutComp
+{
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    background: $about-background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p
+    {
+        color:$p-font-color;
+        font-size: $normal-font-size;
+    }
+    .firstSect, .secondSect
+    {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .firstSect
+    {
+        &>div
+        {
+            margin-top: 1rem;
+        }
+    }
+    .secondSect
+    {
+        padding: {
+            top:1rem;
+            bottom:1rem;
+        }
+        p
+        {
+            color: black;
+            font-weight: 300;
+        }
+    }
+    h2
+    {
+        font-size: $sub-header-size;
+    }
+    h3
+    {
+        font-size: $normal-font-size;
+        &.mainh3
+        {
+            font-weight: bold;
+        }
+    }
+    .backBtn
+    {
+        position:fixed;
+        top: 90vh;
+        right: 0;
+        z-index: 100;
+        background: $main-color;
+        height: $back-to-top-btn-height;
+        border-radius: 2rem;
+        border: 1px solid black;
+        overflow: hidden;
+        color: $secondary-color;
+        padding: $back-to-top-btn-padding;
+        font-size: $normal-font-size;
+        cursor: pointer;
+        &:hover
+        {
+            animation: btn-move 1s ease-in infinite;
+        }
+    }
+}

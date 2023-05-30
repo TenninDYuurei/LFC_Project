@@ -7,7 +7,7 @@ function Devotionals() {
     let styles = {
         backgroundColor: "white",
         width:250,
-        height:250
+        height: 250
     }
 
 

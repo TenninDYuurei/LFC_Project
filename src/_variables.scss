@@ -1,13 +1,25 @@
+//Colors
 $main-color: rgb(184, 37, 37);
 $cover-div-color: rgba(0, 0, 0, 0.5);
 $secondary-color:rgb(255, 255, 255);
+$font-color:black;
+$cover-color:rgba(192, 192, 192, 0.753);
+$p-font-color:rgb(231, 231, 231);
+$about-background-color:rgb(158, 157, 157);
+
+//Font sizes
 $headerLink-font-size:2rem;
 $header-font-size:3.5rem;
 $sub-header-size:2.5rem;
-$normal-font-size:2rem;
+$normal-font-size:1.5rem;
+$footer-font-size:1.2rem;
+
+//Font family
 $header-font-family:Verdana;
 $normal-font-family:Garamond;
-$cover-color:rgba(192, 192, 192, 0.753);
-$font-color:black;
-$p-font-color:rgb(184, 181, 181);
-$footer-font-size:1.2rem;
+
+//back to top button variables
+$back-to-top-btn-height:auto;
+$back-to-top-btn-width:auto;
+$back-to-top-btn-padding:0.5rem;
+

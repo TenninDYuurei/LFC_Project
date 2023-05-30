@@ -36,14 +36,7 @@ class Main extends Component{
                         <h3>Watch uplifting and insightful short videos, meant to enliven and educate your spirit man. 
                             Also get access to snippets and wisdom quotes from our father in the lord, the bishop over this commission for your daily meditation.
                         </h3>
-                        <div style={{
-            display: "grid",
-            gridTemplateRow: "150px",
-            gridTemplateColumns: "repeat(3, minmax(auto,auto))",
-            gridGap: "15px",
-            
-            
-        }}>
+                        <div className="imageContainer">
                             <div className='pseudoImage'>Image with caption</div>
                             <div className='pseudoImage'>Image with caption</div>
                             <div className='pseudoImage'>Image with caption</div>
@@ -115,7 +108,11 @@ class Main extends Component{
                         </div>
                     <div className="cover"></div>
                 </section>
-
+                <button className='toTopBtn'>
+                    <a href='#' >
+                        Back to top
+                    </a>
+                </button>
             </main>
             )
     }

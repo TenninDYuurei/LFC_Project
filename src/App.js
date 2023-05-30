@@ -2,15 +2,15 @@ import React from "react";
 import Header from "./childrenComponents/header/header";
 import Footer from "./childrenComponents/footer/footer";
 import './App.css';
-import Main from '../src/childrenComponents/pages/main';
+import Main from "./childrenComponents/pages/homepage/main";
 import {Routes, Route} from 'react-router-dom';
 import Announcements from "./childrenComponents/pages/announcements";
-import About from "./childrenComponents/pages/about";
+import About from "./childrenComponents/pages/about/about";
 import PrayerReqsPage from "./childrenComponents/pages/prayerRequests";
-import Gallery from "./childrenComponents/pages/gallery";
+import Gallery from "./childrenComponents/pages/gallery/gallery";
 import Devotionals from "./childrenComponents/pages/devotionalMessages";
-import VideoSkit from "./childrenComponents/pages/videoSkitPage";
-import Images from "./childrenComponents/pages/captionedImages";
+import VideoSkit from "./childrenComponents/pages/gallery/videoSkitPage";
+import Images from "./childrenComponents/pages/gallery/captionedImages";
 
 
 
